@@ -1,19 +1,20 @@
 public class problem2 {
 
-        public static void main(String[] args){
-                int num = 1;
-                int num2 = 2;
-                int sum = 0;
-                while(num2 <= 4000000){
-                        int temp = num + num2;
-                        System.out.println(temp);//Fibonacci Number
-                        if(temp%2 == 0){
-                                sum += temp;
-                                System.out.println("Sum is: " + sum);
-                        }
-                        num = num2;
-                        num2 = temp;
-                }
-        }
+    public static void main(String[] args){
+    		//1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+            int num = 2; //leading number
+            int num2 = 1; //second number
+            int sum = 2; //first EVEN fibonacci number
+            while(num <= 4000000){ //values do not exceed 4,000,000
+                    int fibNum = num + num2;
+                    System.out.printf("%-5d %-5d %-5d\n",num2, num, fibNum);//All Fibonacci numbers
+                    if(fibNum%2 == 0){ //only even valued numbers
+                            sum += fibNum;
+                    }
+                    num2 = num; //following becomes next in the sequence
+                    num = fibNum; //lead number becomes the newest Fibonacci number    
+            }
+            System.out.println("Sum is: " + sum); 
+    }
 
 }
