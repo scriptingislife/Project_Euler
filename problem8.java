@@ -18,6 +18,8 @@ public class problem8 {
 				greatestSum = currentSum;
 			}
 			
+			currentSum = 0;
+			
 		}//digit
 		System.out.println(greatestSum);
 		System.exit(0);
