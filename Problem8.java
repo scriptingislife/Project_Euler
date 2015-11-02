@@ -1,5 +1,3 @@
-public class problem8 {
-
 
 public class Problem8 {
 
@@ -35,8 +33,5 @@ public class Problem8 {
 		}
 		return digitSub;
 	}
-	
-}
-
 	
 }
