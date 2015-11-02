@@ -9,12 +9,13 @@ public class problem8 {
 			currentSum = dig_1; //initialize the sum 
 			
 			for(int j = 1; j <= 12;j++){//next 12 digits after
-				currentSum *= Integer.parseInt("" + digits.charAt(i + j)); //mulitply next digit to our current sum
+				currentSum *= Integer.parseInt("" + digits.charAt(i + j)); //multiply next digit to our current sum
 			}//next digits
 			
 			//System.out.printf("%-5d %-5d %-5d\n", i, dig_1, currentSum); //debugging
 			
 			if(currentSum > greatestSum){ //if this sum is largest so far
+				//System.out.println("Greatest: " + greatestSum + " Current: " + currentSum + " 13 Digits: " + digitString(digits, i));
 				greatestSum = currentSum;
 			}
 			
@@ -23,6 +24,14 @@ public class problem8 {
 		}//digit
 		System.out.println(greatestSum);
 		System.exit(0);
+	}
+	
+	public static String digitString(String digits, int pos){
+		String digitSub = "";
+		for(int i = 0; i < 13; i++){
+			digitSub += digits.charAt(pos + i);
+		}
+		return digitSub;
 	}
 	
 }
